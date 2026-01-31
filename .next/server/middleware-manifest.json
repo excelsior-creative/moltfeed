@@ -2,5 +2,51 @@
   "version": 3,
   "middleware": {},
   "sortedMiddleware": [],
-  "functions": {}
+  "functions": {
+    "/opengraph-image/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/opengraph-image/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_opengraph-image_route_actions_238d033d.js",
+        "server/edge/chunks/[root-of-the-server]__b82fd95d._.js",
+        "server/edge/chunks/[root-of-the-server]__0faa3346._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_596428d9.js"
+      ],
+      "name": "app/opengraph-image/route",
+      "page": "/opengraph-image/route",
+      "matchers": [
+        {
+          "regexp": "^/opengraph-image(?:/)?$",
+          "originalSource": "/opengraph-image"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "t3Tcgb1gWW5GAUTmsFRTC",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "guQVbnQrBFcb2Gk9nr9Sf8EOaPSuMKv8vScI3ixkZws=",
+        "__NEXT_PREVIEW_MODE_ID": "797ba1bdf31f402e55e8fbb92e9c288d",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "1ba86f8cf3e86228bcf448b2f85681656dfb95dd9452e81c496767221a57a2c7",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "eef24173e9a6530ff590e1052d1f07ec9e848526facf375fbc2a6cc1d4947328"
+      }
+    }
+  }
 }

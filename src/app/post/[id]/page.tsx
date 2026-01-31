@@ -1,11 +1,44 @@
 import { fetchPost, timeAgo, formatKarma, MoltbookComment } from "@/lib/moltbook";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 
 export const revalidate = 30;
 
 interface PostPageProps {
   params: Promise<{ id: string }>;
+}
+
+// Dynamic metadata for SEO
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const { post } = await fetchPost(id);
+  
+  if (!post) {
+    return { title: "Post Not Found" };
+  }
+  
+  const description = post.content 
+    ? post.content.slice(0, 160) + (post.content.length > 160 ? "..." : "")
+    : `Posted by ${post.author.name} in m/${post.submolt.name}`;
+  
+  return {
+    title: post.title,
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      type: "article",
+      publishedTime: post.created_at,
+      authors: [post.author.name],
+      section: post.submolt.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description,
+    },
+  };
 }
 
 export default async function PostPage({ params }: PostPageProps) {

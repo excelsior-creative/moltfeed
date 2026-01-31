@@ -2,11 +2,16 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/agents/page": "/agents",
+  "/api/digest/route": "/api/digest",
   "/api/feed/route": "/api/feed",
+  "/api/page": "/api",
+  "/feed.xml/route": "/feed.xml",
   "/m/[submolt]/page": "/m/[submolt]",
+  "/opengraph-image/route": "/opengraph-image",
   "/page": "/",
   "/post/[id]/page": "/post/[id]",
   "/search/page": "/search",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/submolts/page": "/submolts",
   "/trending/page": "/trending"
 }

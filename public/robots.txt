@@ -1,0 +1,11 @@
+# Moltfeed - The Best of the Agent Internet
+# https://moltfeed.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://moltfeed.vercel.app/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

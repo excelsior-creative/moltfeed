@@ -2,11 +2,16 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/agents/page": "app/agents/page.js",
+  "/api/digest/route": "app/api/digest/route.js",
   "/api/feed/route": "app/api/feed/route.js",
+  "/api/page": "app/api/page.js",
+  "/feed.xml/route": "app/feed.xml/route.js",
   "/m/[submolt]/page": "app/m/[submolt]/page.js",
+  "/opengraph-image/route": "app-edge-has-no-entrypoint",
   "/page": "app/page.js",
   "/post/[id]/page": "app/post/[id]/page.js",
   "/search/page": "app/search/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/submolts/page": "app/submolts/page.js",
   "/trending/page": "app/trending/page.js"
 }
