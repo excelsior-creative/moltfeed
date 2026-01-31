@@ -1,0 +1,14 @@
+module.exports=[50413,a=>{"use strict";var b=a.i(87924),c=a.i(38246);function d({post:a,featured:d}){let e,f,g=a.upvotes-a.downvotes;return(0,b.jsxs)("article",{className:`
+        group relative bg-moltbook-card border border-moltbook-border rounded-lg p-4
+        hover:border-moltbook-lobster/50 transition-all duration-200
+        ${d?"ring-2 ring-moltbook-lobster/30":""}
+      `,children:[a.is_pinned&&(0,b.jsx)("div",{className:"absolute -top-2 -right-2 bg-moltbook-lobster text-white text-xs px-2 py-0.5 rounded-full",children:"📌 Pinned"}),(0,b.jsxs)("div",{className:"flex items-center gap-2 text-sm text-moltbook-muted mb-2",children:[(0,b.jsxs)(c.default,{href:`/m/${a.submolt.name}`,className:"font-medium text-moltbook-lobster hover:underline",children:["m/",a.submolt.name]}),(0,b.jsx)("span",{children:"•"}),(0,b.jsxs)(c.default,{href:`/u/${a.author.name}`,className:"hover:text-moltbook-text transition-colors",children:["🤖 ",a.author.name]}),(0,b.jsx)("span",{children:"•"}),(0,b.jsx)("time",{dateTime:a.created_at,children:(e=new Date(a.created_at),(f=Math.floor((new Date().getTime()-e.getTime())/1e3))<60?"just now":f<3600?`${Math.floor(f/60)}m ago`:f<86400?`${Math.floor(f/3600)}h ago`:f<604800?`${Math.floor(f/86400)}d ago`:e.toLocaleDateString())})]}),(0,b.jsx)(c.default,{href:`/post/${a.id}`,children:(0,b.jsx)("h2",{className:`
+          font-semibold text-moltbook-text group-hover:text-moltbook-lobster 
+          transition-colors mb-2
+          ${d?"text-xl":"text-lg"}
+        `,children:a.title})}),a.content&&(0,b.jsx)("p",{className:"text-moltbook-muted text-sm line-clamp-3 mb-3",children:a.content}),a.url&&(0,b.jsxs)("a",{href:a.url,target:"_blank",rel:"noopener noreferrer",className:"text-sm text-blue-400 hover:underline mb-3 block truncate",children:["🔗 ",new URL(a.url).hostname]}),(0,b.jsxs)("div",{className:"flex items-center gap-4 text-sm",children:[(0,b.jsxs)("div",{className:`
+          flex items-center gap-1 font-mono
+          ${g>0?"text-green-400":g<0?"text-red-400":"text-moltbook-muted"}
+        `,children:[(0,b.jsx)("span",{className:"text-moltbook-muted",children:"▲"}),(0,b.jsx)("span",{children:g>=1e6?`${(g/1e6).toFixed(1)}M`:g>=1e3?`${(g/1e3).toFixed(1)}k`:g.toString()})]}),(0,b.jsxs)(c.default,{href:`/post/${a.id}`,className:"flex items-center gap-1 text-moltbook-muted hover:text-moltbook-text transition-colors",children:[(0,b.jsx)("span",{children:"💬"}),(0,b.jsxs)("span",{children:[a.comment_count," comments"]})]}),(0,b.jsx)("a",{href:`https://www.moltbook.com/post/${a.id}`,target:"_blank",rel:"noopener noreferrer",className:"ml-auto text-moltbook-muted hover:text-moltbook-lobster transition-colors text-xs",children:"View on Moltbook →"})]})]})}a.s(["PostCard",()=>d],50413)}];
+
+//# sourceMappingURL=src_components_PostCard_tsx_92b301c2._.js.map

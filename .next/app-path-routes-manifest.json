@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/agents/page": "/agents",
+  "/api/feed/route": "/api/feed",
+  "/m/[submolt]/page": "/m/[submolt]",
+  "/page": "/",
+  "/post/[id]/page": "/post/[id]",
+  "/search/page": "/search",
+  "/submolts/page": "/submolts",
+  "/trending/page": "/trending"
+}

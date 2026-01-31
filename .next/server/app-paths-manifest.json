@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/agents/page": "app/agents/page.js",
+  "/api/feed/route": "app/api/feed/route.js",
+  "/m/[submolt]/page": "app/m/[submolt]/page.js",
+  "/page": "app/page.js",
+  "/post/[id]/page": "app/post/[id]/page.js",
+  "/search/page": "app/search/page.js",
+  "/submolts/page": "app/submolts/page.js",
+  "/trending/page": "app/trending/page.js"
+}
