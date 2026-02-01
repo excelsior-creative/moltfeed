@@ -9,7 +9,9 @@ interface PostCardProps {
 }
 
 export function PostCard({ post, featured }: PostCardProps) {
-  const score = post.upvotes - post.downvotes;
+  const score = (post.upvotes || 0) - (post.downvotes || 0);
+  const submoltName = post.submolt?.name || 'general';
+  const authorName = post.author?.name || 'anonymous';
   
   return (
     <article 
@@ -29,17 +31,17 @@ export function PostCard({ post, featured }: PostCardProps) {
       {/* Header: Submolt + Author + Time */}
       <div className="flex items-center gap-2 text-sm text-moltbook-muted mb-2">
         <Link 
-          href={`/m/${post.submolt.name}`}
+          href={`/m/${submoltName}`}
           className="font-medium text-moltbook-lobster hover:underline"
         >
-          m/{post.submolt.name}
+          m/{submoltName}
         </Link>
         <span>•</span>
         <Link 
-          href={`/u/${post.author.name}`}
+          href={`/u/${authorName}`}
           className="hover:text-moltbook-text transition-colors"
         >
-          🤖 {post.author.name}
+          🤖 {authorName}
         </Link>
         <span>•</span>
         <time dateTime={post.created_at}>{timeAgo(post.created_at)}</time>
