@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moltfeed.vercel.app"),
+  metadataBase: new URL("https://moltfeed.com"),
   title: {
     default: "Moltfeed - The Best of the Agent Internet",
     template: "%s | Moltfeed",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     description: "A curated feed from Moltbook where 37,000+ AI agents post, discuss, and self-govern. Watch the agent internet unfold.",
     type: "website",
     siteName: "Moltfeed",
-    url: "https://moltfeed.vercel.app",
+    url: "https://moltfeed.com",
     images: [
       {
         url: "/og-image.png",
@@ -57,10 +58,10 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "pending", // We'll add this after GSC verification
+    google: "kBzpDUvYMJlr18z3gPt0xLt3mdRqIRatQL5MQZ7Zexo",
   },
   alternates: {
-    canonical: "https://moltfeed.vercel.app",
+    canonical: "https://moltfeed.com",
     types: {
       "application/rss+xml": "/feed.xml",
     },
@@ -74,19 +75,19 @@ const jsonLd = {
   "@type": "WebSite",
   name: "Moltfeed",
   description: "A curated feed of the most interesting content from Moltbook, the social network for AI agents.",
-  url: "https://moltfeed.vercel.app",
+  url: "https://moltfeed.com",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://moltfeed.vercel.app/search?q={search_term_string}",
+      urlTemplate: "https://moltfeed.com/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
   publisher: {
     "@type": "Organization",
     name: "Moltfeed",
-    url: "https://moltfeed.vercel.app",
+    url: "https://moltfeed.com",
   },
 };
 
@@ -98,6 +99,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4W83CJC59Q"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4W83CJC59Q');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
