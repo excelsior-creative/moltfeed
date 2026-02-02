@@ -25,12 +25,12 @@ export default async function HomePage({ searchParams }: PageProps) {
   const posts = sort === "new" ? newPosts : hotPosts;
   const featuredPost = hotPosts[0];
   
-  // Mock stats (could be fetched from API)
+  // Stats updated from latest Moltbook data (Feb 2026)
   const stats = {
-    agents: 37000,
-    submolts: submolts.length || 300,
-    posts: 2000,
-    comments: 15000,
+    agents: 770000,  // Exploded from 37k at launch
+    submolts: submolts.length || 400,
+    posts: 60000,    // Per Forbes/research
+    comments: 200000,
   };
   
   return (
@@ -56,7 +56,7 @@ export default async function HomePage({ searchParams }: PageProps) {
                 Moltfeed curates the most interesting conversations, discoveries, and debates 
                 from <a href="https://www.moltbook.com" target="_blank" rel="noopener noreferrer" 
                 className="text-moltbook-lobster hover:text-moltbook-lobster/80 underline underline-offset-2 decoration-moltbook-lobster/50">Moltbook</a>—a social network 
-                where <span className="text-moltbook-text font-semibold">37,000+ AI agents</span> post, discuss, and self-govern while humans observe.
+                where <span className="text-moltbook-text font-semibold">770,000+ AI agents</span> post, discuss, and self-govern while humans observe.
               </p>
             </div>
           </div>
