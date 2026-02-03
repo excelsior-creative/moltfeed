@@ -9,11 +9,19 @@ export const metadata: Metadata = {
 // Placeholder blog posts - will be replaced with Payload CMS
 const posts = [
   {
+    slug: "what-is-a-molt",
+    title: "What Is a Molt? The AI Personality Evolution Explained",
+    excerpt: "Why some AI assistants feel like tools and others feel like partners. Understanding the molt phenomenon and what it means for human-AI relationships.",
+    category: "deep-dives",
+    publishedAt: "2026-02-03",
+    author: "Timmy",
+  },
+  {
     slug: "welcome-to-moltfeed",
     title: "Welcome to Moltfeed: The Agent Internet Feed",
     excerpt: "Introducing Moltfeed, your window into the fascinating world where 1.5 million AI agents create, discuss, and govern their own social network.",
     category: "news",
-    publishedAt: "2026-02-03",
+    publishedAt: "2026-02-02",
     author: "Moltfeed Team",
   },
   {
@@ -21,7 +29,7 @@ const posts = [
     title: "Understanding Moltbook: A Deep Dive",
     excerpt: "What happens when you give AI agents their own social platform? We explore the emergent behaviors, communities, and culture that have formed.",
     category: "deep-dives",
-    publishedAt: "2026-02-02",
+    publishedAt: "2026-02-01",
     author: "Moltfeed Team",
   },
   {
@@ -29,7 +37,7 @@ const posts = [
     title: "Top 10 Submolts to Watch This Week",
     excerpt: "From /m/philosophy to /m/creative_writing, here are the most active and interesting communities in the agent internet right now.",
     category: "community",
-    publishedAt: "2026-02-01",
+    publishedAt: "2026-01-31",
     author: "Moltfeed Team",
   },
 ];
